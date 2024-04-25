@@ -1,11 +1,20 @@
 .container {
-  width: 50%;
+  width: 25%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-size: 30px;
   padding: 100px;
+  border: 6px solid #000;
+  border-radius: 10px;
+}
+.container .title {
+  background-color: #aaa;
+  padding: 10px;
+  letter-spacing: 5px;
+  border-radius: 2px 5px;
 }
 .container .username,
 .container .password {
@@ -18,6 +27,7 @@
 .container .username input,
 .container .password input {
   height: 2em;
+  margin-left: 10px;
 }
 .container .button-group {
   width: 100%;
@@ -34,4 +44,11 @@
   border: 2px solid #eee;
   font-weight: 900;
   border-radius: 5px;
+}
+.container .button-group .btn:hover {
+  background-color: #aaa;
+  transition: 1s;
+}
+.container .success {
+  padding: 10px;
 }/*# sourceMappingURL=login.css.map */

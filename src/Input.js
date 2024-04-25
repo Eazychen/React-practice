@@ -40,6 +40,7 @@ const Input = () => {
 						onChange={(e) => {
 							setUserName(e.target.value);
 						}}
+						placeholder="請輸入帳號"
 					/>
 				</div>
 				<div className="password">
@@ -51,6 +52,7 @@ const Input = () => {
 						onChange={(e) => {
 							setPassWord(e.target.value);
 						}}
+						placeholder="請輸入密碼"
 					/>
 				</div>
 				<div className="button-group">
@@ -70,7 +72,10 @@ const Input = () => {
 				</div>
 			</form>
 
-			<h3 style={{ background: logout.background, color: logout.color }}>
+			<h3
+				style={{ background: logout.background, color: logout.color }}
+				className="success"
+			>
 				success!
 			</h3>
 		</div>
