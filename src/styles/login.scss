@@ -1,0 +1,36 @@
+.container {
+	width: 50%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 30px;
+	padding: 100px;
+	.username,
+	.password {
+		text-align: center;
+		padding: 5px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		input {
+			height: 2em;
+		}
+	}
+	.button-group {
+		width: 100%;
+		margin-top: 10px;
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		.btn {
+			width: 100px;
+			padding: 5px;
+			margin: 5px;
+			font-size: 1rem;
+			border: 2px solid #eee;
+			font-weight: 900;
+			border-radius: 5px;
+		}
+	}
+}
