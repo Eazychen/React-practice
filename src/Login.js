@@ -14,4 +14,5 @@ const themes = {
 const Login = React.createContext({
 	logout: themes.logout,
 });
+
 export { Login, themes };

@@ -1,21 +1,27 @@
 import React, { useContext, useState } from "react";
 import { Login, themes } from "./Login";
+
 import "./styles/login.css";
+import { useNavigate } from "react-router-dom";
 
 const Input = () => {
 	const [username, setUserName] = useState("");
 	const [password, setPassWord] = useState("");
 	const { logout, toggleTheme } = useContext(Login);
 
+	const navigate = useNavigate();
+
 	const handlerFormSubmit = (e) => {
 		e.preventDefault();
 		if (!username || !password) {
-			alert("please fill in both fields !");
-			return;
+			navigate("/404");
+			alert("Please enter your username and password");
+		} else {
+			toggleTheme();
+			setUserName("");
+			setPassWord("");
+			navigate("/page");
 		}
-		toggleTheme();
-		setUserName("");
-		setPassWord("");
 	};
 
 	const handlerLogout = () => {
@@ -38,7 +44,7 @@ const Input = () => {
 						id="admin"
 						value={username}
 						onChange={(e) => {
-							setUserName(e.target.value);
+							setUserName(e.target.value.trim());
 						}}
 						placeholder="請輸入帳號"
 					/>
@@ -50,7 +56,7 @@ const Input = () => {
 						id="password"
 						value={password}
 						onChange={(e) => {
-							setPassWord(e.target.value);
+							setPassWord(e.target.value.trim());
 						}}
 						placeholder="請輸入密碼"
 					/>
